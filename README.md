@@ -1,2 +1,2 @@
 # theme
-Self-use giu theme.
+Self-use imgui theme for giu.
