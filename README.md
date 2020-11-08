@@ -1,2 +1,2 @@
-# giu-theme
+# theme
 Self-use giu theme.
