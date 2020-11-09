@@ -42,6 +42,7 @@ func SetThemeDark(style *imgui.Style) {
 func SetThemeLight(style *imgui.Style) {
 	style.SetColor(imgui.StyleColorText, RGBAToVec4(color.RGBA{60, 71, 89, 255}))
 	style.SetColor(imgui.StyleColorWindowBg, RGBAToVec4(color.RGBA{240, 240, 240, 255}))
+	style.SetColor(imgui.StyleColorChildBg, RGBAToVec4(color.RGBA{229, 229, 229, 255}))
 	style.SetColor(imgui.StyleColorFrameBg, RGBAToVec4(color.RGBA{229, 229, 229, 255}))
 	style.SetColor(imgui.StyleColorFrameBgHovered, RGBAToVec4(color.RGBA{210, 210, 210, 255}))
 	style.SetColor(imgui.StyleColorFrameBgActive, RGBAToVec4(color.RGBA{215, 215, 215, 255}))
@@ -68,9 +69,11 @@ func UseLayoutFlat() EffectMethod {
 			imgui.PushStyleVarFloat(imgui.StyleVarChildBorderSize, 1)
 			imgui.PushStyleVarFloat(imgui.StyleVarFrameRounding, 0)
 			imgui.PushStyleVarFloat(imgui.StyleVarChildRounding, 0)
+			imgui.PushStyleVarFloat(imgui.StyleVarWindowRounding, 0)
+			imgui.PushStyleVarFloat(imgui.StyleVarTabRounding, 0)
 			imgui.PushStyleVarVec2(imgui.StyleVarWindowPadding, imgui.Vec2{X: 8, Y: 6})
 		},
-		func() { imgui.PopStyleVarV(6) },
+		func() { imgui.PopStyleVarV(8) },
 	}
 }
 
