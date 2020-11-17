@@ -141,7 +141,7 @@ func UseLayoutFluent() EffectMethod {
 func UseStyleButtonDark() EffectMethod {
 	return EffectMethod{
 		func() {
-			imgui.PushStyleVarFloat(imgui.StyleVarFrameRounding, 2)
+			imgui.PushStyleVarFloat(imgui.StyleVarFrameRounding, 0)
 			imgui.PushStyleVarVec2(imgui.StyleVarFramePadding, imgui.Vec2{X: 0, Y: 0})
 			imgui.PushStyleColor(imgui.StyleColorButton, imgui.Vec4{X: 0.125, Y: 0.125, Z: 0.125, W: 1})
 			imgui.PushStyleColor(imgui.StyleColorButtonHovered, imgui.Vec4{X: 0.125, Y: 0.125, Z: 0.125, W: 0.90})
