@@ -118,7 +118,9 @@ func UseLayoutFlat() EffectMethod {
 			imgui.PushStyleVarFloat(imgui.StyleVarTabRounding, 0)
 			imgui.PushStyleVarVec2(imgui.StyleVarWindowPadding, imgui.Vec2{X: 8, Y: 6})
 		},
-		func() { imgui.PopStyleVarV(8) },
+		func() {
+			imgui.PopStyleVarV(8)
+		},
 	}
 }
 
@@ -134,7 +136,9 @@ func UseLayoutFluent() EffectMethod {
 			imgui.PushStyleVarFloat(imgui.StyleVarTabRounding, 0)
 			imgui.PushStyleVarVec2(imgui.StyleVarWindowPadding, imgui.Vec2{X: 8, Y: 6})
 		},
-		func() { imgui.PopStyleVarV(8) },
+		func() {
+			imgui.PopStyleVarV(8)
+		},
 	}
 }
 
