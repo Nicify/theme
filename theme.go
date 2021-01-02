@@ -21,6 +21,7 @@ type Palette struct {
 func SetThemeDark(style *imgui.Style) {
 	style.SetColor(imgui.StyleColorText, RGBAToVec4(color.RGBA{230, 230, 230, 255}))
 	style.SetColor(imgui.StyleColorWindowBg, RGBAToVec4(color.RGBA{50, 50, 50, 250}))
+	style.SetColor(imgui.StyleColorChildBg, RGBAToVec4(color.RGBA{50, 50, 50, 250}))
 	style.SetColor(imgui.StyleColorFrameBg, RGBAToVec4(color.RGBA{10, 10, 10, 240}))
 	style.SetColor(imgui.StyleColorFrameBgHovered, RGBAToVec4(color.RGBA{20, 20, 20, 250}))
 	style.SetColor(imgui.StyleColorFrameBgActive, RGBAToVec4(color.RGBA{25, 25, 25, 250}))
@@ -64,6 +65,7 @@ func SetThemeLight(style *imgui.Style) {
 func SetThemeFluentDark(style *imgui.Style) {
 	style.SetColor(imgui.StyleColorText, RGBAToVec4(color.RGBA{255, 255, 255, 255}))
 	style.SetColor(imgui.StyleColorWindowBg, RGBAToVec4(color.RGBA{27, 26, 25, 255}))
+	style.SetColor(imgui.StyleColorChildBg, RGBAToVec4(color.RGBA{27, 26, 25, 255}))
 	style.SetColor(imgui.StyleColorFrameBg, RGBAToVec4(color.RGBA{27, 26, 25, 255}))
 	style.SetColor(imgui.StyleColorFrameBgHovered, RGBAToVec4(color.RGBA{37, 36, 35, 255}))
 	style.SetColor(imgui.StyleColorFrameBgActive, RGBAToVec4(color.RGBA{41, 40, 39, 255}))
@@ -117,9 +119,10 @@ func UseLayoutFlat() EffectMethod {
 			imgui.PushStyleVarFloat(imgui.StyleVarWindowRounding, 0)
 			imgui.PushStyleVarFloat(imgui.StyleVarTabRounding, 0)
 			imgui.PushStyleVarVec2(imgui.StyleVarWindowPadding, imgui.Vec2{X: 8, Y: 6})
+			imgui.PushStyleVarFloat(imgui.StyleVarGrabRounding, 0)
 		},
 		func() {
-			imgui.PopStyleVarV(8)
+			imgui.PopStyleVarV(9)
 		},
 	}
 }
